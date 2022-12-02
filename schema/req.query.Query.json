@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "coord"
+    ],
+    "properties": {
+        "coord": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "number"
+            }
+        }
+    }
+}

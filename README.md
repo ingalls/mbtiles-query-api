@@ -1,2 +1,4 @@
-# mbtiles-query-api
-API for reverse geocoding a single layer of features from an MBTiles file
+<h1 align=center>MBTiles Query</h1>
+
+<p align=center>Query results from an MBTiles layer</p>
+

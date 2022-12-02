@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "type",
+        "properties",
+        "geometry"
+    ],
+    "properties": {
+        "type": {
+            "type": "string"
+        },
+        "properties": {
+            "type": "string"
+        },
+        "geometry": {
+            "type": "string"
+        }
+    }
+}

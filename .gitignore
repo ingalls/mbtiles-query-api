@@ -1,3 +1,6 @@
+*.mbtiles
+*.tilebase
+
 # Logs
 logs
 *.log
