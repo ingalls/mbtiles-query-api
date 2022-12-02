@@ -74,7 +74,7 @@ export default async function router(schema, config) {
             const info = infos.get(req.params.source);
 
             if (req.params.minzoom > info.maxzoom) throw new Err(400, null, 'Over MaxZoom');
-            if (req.params.minzoom < info.maxzoom) throw new Err(400, null, 'Under MinZoom');
+            if (req.params.minzoom < info.mixzoom) throw new Err(400, null, 'Under MinZoom');
 
             const xy = tb.pointToTile(req.query.coord[0], req.query.coord[1], req.params.zoom);
             x = xy[0];
@@ -86,7 +86,6 @@ export default async function router(schema, config) {
             return Err.respond(err, res);
         }
 
-        console.error(req.params.zoom, x, y)
         tiles.getTile(req.params.zoom, x, y, (err, buffer) => {
             if (err) return Err.respond(err, res);
 
@@ -98,10 +97,10 @@ export default async function router(schema, config) {
             }], req.query.coord, {
                 radius: 0,
                 limit: 1
-            }, (err, res) => {
+            }, (err, feat) => {
                 if (err) return Err.respond(err, res);
 
-                console.error(res);
+                res.json(feat.features[0]);
             });
         })
     });
