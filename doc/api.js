@@ -54,9 +54,9 @@
 
 
 /**
-* @api {get} /query/:source/query Query
+* @api {get} /query/:source/:zoom/query Query
 * @apiVersion 1.0.0
-* @apiName GET-/query/:source/query
+* @apiName GET-/query/:source/:zoom/query
 * @apiGroup Query
 * @apiPermission public
 *
@@ -64,6 +64,7 @@
 *   Retrieve a feature closest to a given lat/lng
 *
 * @apiParam {string} source param
+* @apiParam {integer} zoom param
 *
 * @apiSchema (Query) {jsonschema=../schema/req.query.Query.json} apiParam
 *
