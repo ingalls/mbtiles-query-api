@@ -77,7 +77,7 @@ export default async function server(config) {
     fs.writeFileSync(new URL('./doc/api.js', import.meta.url), schema.docs.join('\n'));
 
     return new Promise((resolve, reject) => {
-        const srv = app.listen(4999, (err) => {
+        const srv = app.listen(5000, (err) => {
             if (err) return reject(err);
 
             if (!config.silent) console.log('ok - http://localhost:4999');

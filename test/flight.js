@@ -32,7 +32,7 @@ export default class Flight {
     constructor() {
         this.srv;
         this.config;
-        this.base = 'http://localhost:4999';
+        this.base = 'http://localhost:5000';
         this.token = {};
     }
 
