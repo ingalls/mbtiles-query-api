@@ -80,7 +80,7 @@ export default async function server(config) {
         const srv = app.listen(5000, (err) => {
             if (err) return reject(err);
 
-            if (!config.silent) console.log('ok - http://localhost:4999');
+            if (!config.silent) console.log('ok - http://localhost:5000');
             return resolve(srv);
         });
     });

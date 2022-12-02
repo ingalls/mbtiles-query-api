@@ -18,9 +18,27 @@
 
 
 /**
-* @api {get} /query/:source/:layer Query
+* @api {get} /query Sources
 * @apiVersion 1.0.0
-* @apiName GET-/query/:source/:layer
+* @apiName GET-/query
+* @apiGroup Query
+* @apiPermission public
+*
+* @apidescription
+*   Return available data sources
+*
+
+*
+*
+*
+* @apiSchema {jsonschema=../schema/res.Object.json} apiSuccess
+*/
+
+
+/**
+* @api {get} /query/:source Query
+* @apiVersion 1.0.0
+* @apiName GET-/query/:source
 * @apiGroup Query
 * @apiPermission public
 *
@@ -28,7 +46,24 @@
 *   Retrieve a feature closest to a given lat/lng
 *
 * @apiParam {string} source param
-* @apiParam {string} layer param
+*
+*
+*
+* @apiSchema {jsonschema=../schema/res.Object.json} apiSuccess
+*/
+
+
+/**
+* @api {get} /query/:source/query Query
+* @apiVersion 1.0.0
+* @apiName GET-/query/:source/query
+* @apiGroup Query
+* @apiPermission public
+*
+* @apidescription
+*   Retrieve a feature closest to a given lat/lng
+*
+* @apiParam {string} source param
 *
 * @apiSchema (Query) {jsonschema=../schema/req.query.Query.json} apiParam
 *

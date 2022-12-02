@@ -23,6 +23,9 @@
     },
     "homepage": "https://github.com/ingalls/mbtiles-query-api#readme",
     "dependencies": {
+        "@mapbox/mbtiles": "^0.12.1",
+        "@mapbox/sphericalmercator": "^1.2.0",
+        "@mapbox/vtquery": "^0.6.0",
         "@openaddresses/batch-error": "^1.1.0",
         "@openaddresses/batch-schema": "^7.3.0",
         "ajv": "^8.11.2",
